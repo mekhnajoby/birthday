@@ -78,3 +78,11 @@ document.addEventListener('DOMContentLoaded', () => {
     createConfetti();
     showSlide(0);
 });
+function openVideo() {
+    document.getElementById("videoModal").style.display = "flex";
+}
+
+function closeVideo() {
+    document.getElementById("videoModal").style.display = "none";
+    document.getElementById("birthdayVideo").pause();
+}
