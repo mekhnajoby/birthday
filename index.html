@@ -1,16 +1,142 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brother&#39;s Birthday Wish Site</title>
-    <meta property="og:image" content="https://bolt.new/static/og_default.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Akku!</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<body>
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="floating-elements">
+            <div class="sparkle sparkle-1">✨</div>
+            <div class="sparkle sparkle-2">✨</div>
+            <div class="sparkle sparkle-3">✨</div>
+            <div class="sparkle sparkle-4">✨</div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-icons">
+                <div class="party-icon bounce">🎉</div>
+                <div class="cake-icon pulse">🎂</div>
+                <div class="party-icon bounce">🎉</div>
+            </div>
+
+            <h1 class="main-title slide-in">Happy Birthday</h1>
+            <h2 class="name-title slide-in-delayed">AKKU!</h2>
+
+            <div class="age-text fade-in">Turning 11 Today! 🎉</div>
+            <p class="hero-message fade-in-delayed">
+                Wishing you the most amazing birthday filled with joy, laughter, and all your favorite things!
+            </p>
+        </div>
+    </section>
+
+    <!-- Wishes Section -->
+    <section class="wishes-section">
+        <h2 class="section-title">Special Wishes for You</h2>
+
+        <div class="wishes-grid">
+            <div class="wish-card fade-in-up" style="--delay: 0s">
+                <div class="wish-icon">⭐</div>
+                <h3>Stay Amazing</h3>
+                <p>Keep being the incredible person you are!</p>
+            </div>
+
+            <div class="wish-card fade-in-up" style="--delay: 0.2s">
+                <div class="wish-icon">🏆</div>
+                <h3>Dream Big</h3>
+                <p>May all your dreams come true this year!</p>
+            </div>
+
+            <div class="wish-card fade-in-up" style="--delay: 0.4s">
+                <div class="wish-icon">🎁</div>
+                <h3>Endless Fun</h3>
+                <p>Hope your day is filled with surprises and joy!</p>
+            </div>
+
+            <div class="wish-card fade-in-up" style="--delay: 0.6s">
+                <div class="wish-icon">❤️</div>
+                <h3>Love Always</h3>
+                <p>You are loved more than you know!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memory Lane Section -->
+    <section class="memory-section">
+        <h2 class="section-title">Memory Lane</h2>
+        <p class="memory-subtitle">A journey through your amazing years!</p>
+
+        <div class="carousel-container">
+            <div class="carousel-main">
+                <div class="carousel-slide active">
+                    <div class="carousel-placeholder">
+                        <div class="placeholder-icon">📸</div>
+                        <h3>Your Special Moments</h3>
+                        <p>Add your favorite photos here!</p>
+                        <div class="placeholder-hint">To add your photos/videos: Replace the placeholder content</div>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="carousel-placeholder">
+                        <div class="placeholder-icon">📸</div>
+                        <h3>Amazing Adventures</h3>
+                        <p>Upload memories from your adventures!</p>
+                        <div class="placeholder-hint">To add your photos/videos: Replace the placeholder content</div>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="carousel-placeholder">
+                        <div class="placeholder-icon">🎬</div>
+                        <h3>Fun Videos</h3>
+                        <p>Add videos of your best moments!</p>
+                        <div class="placeholder-hint">To add your photos/videos: Replace the placeholder content</div>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="carousel-placeholder">
+                        <div class="placeholder-icon">📸</div>
+                        <h3>Happy Times</h3>
+                        <p>More memories to come!</p>
+                        <div class="placeholder-hint">To add your photos/videos: Replace the placeholder content</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button class="carousel-btn prev" id="prevBtn">❮</button>
+
+                <div class="carousel-dots" id="dotsContainer">
+                    <button class="dot active" data-index="0"></button>
+                    <button class="dot" data-index="1"></button>
+                    <button class="dot" data-index="2"></button>
+                    <button class="dot" data-index="3"></button>
+                </div>
+
+                <button class="carousel-btn next" id="nextBtn">❯</button>
+            </div>
+        </div>
+
+        <div class="memory-instructions">
+            <p>📸 To add your own photos and videos:</p>
+            <div class="instructions-box">
+                <ol>
+                    <li>1. Create a folder called <code>media</code></li>
+                    <li>2. Add your photos and videos to that folder</li>
+                    <li>3. Update the carousel slides in index.html</li>
+                    <li>4. Replace placeholder with <code>&lt;img src="media/photo1.jpg"&gt;</code></li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="script.js"></script>
+</body>
 </html>
