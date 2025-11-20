@@ -34,20 +34,37 @@
             </p>
         </div>
     </section>
-<div style="text-align:center;">
-    <button class="video-btn" onclick="openVideo()">Click Here</button>
-</div>
 
-    <div id="videoModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeVideo()">&times;</span>
-
-        <video id="birthdayVideo" controls>
-            <source src="media/photo1.mp4" type="video/mp4">
-        </video>
+    <!-- Centered Button -->
+    <div style="text-align:center;">
+        <button class="video-btn" onclick="openVideo()">Click Here</button>
     </div>
-</div>
 
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeVideo()">&times;</span>
+
+            <video id="birthdayVideo" controls>
+                <source src="media/video1.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <!-- Your birthday script -->
     <script type="module" src="script.js"></script>
+
+    <!-- Video popup script (required!) -->
+    <script>
+        function openVideo() {
+            document.getElementById("videoModal").style.display = "flex";
+        }
+
+        function closeVideo() {
+            document.getElementById("videoModal").style.display = "none";
+            document.getElementById("birthdayVideo").pause();
+        }
+    </script>
+
 </body>
 </html>
